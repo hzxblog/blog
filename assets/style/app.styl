@@ -1,0 +1,38 @@
+// Import Vuetify styling
+@require '~vuetify/src/stylus/app.styl'
+
+@media only screen and (min-width: 1264px)
+  .container
+    max-width: 900px !important;
+
+*
+  border-box: box-sizing;
+
+.searchBar
+  flex-grow: 0 !important;
+  .v-input__slot
+    margin: 0;
+    .v-input__append-inner
+      align-self: center;
+
+a
+  text-decoration: none;
+
+.markdown-body
+  color: #d3d3d3 !important;
+  box-sizing: border-box;
+  margin: 0 auto;
+  h2
+    border-bottom: 0 !important;
+  ul
+    list-style-type:circle;
+  pre
+    background: #2D2D2D !important;
+    code
+      box-shadow: none !important;
+      color: #a6e22e;
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst
+    color: #66d9ef;
+
