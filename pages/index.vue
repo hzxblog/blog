@@ -18,7 +18,7 @@
 
               <v-list-tile-sub-title>
                 <span class="mr-2 caption">
-                  <v-icon size="14">access_time</v-icon> {{ $moment(item.create_time * 1000).format('MMMM Do YYYY, h:mm:ss') }}
+                  <v-icon size="14">access_time</v-icon> {{ $moment(item.create_time).format('YYYY年MM月DD日') }}
                 </span>
                 <span class="caption">
                   <v-icon size="14">remove_red_eye</v-icon> {{ item.watcher }}人阅读

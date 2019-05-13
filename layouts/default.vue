@@ -49,7 +49,6 @@
     <v-footer
       fixed
       app
-      dark
     >
       <v-layout>
         <v-flex text-xs-center>

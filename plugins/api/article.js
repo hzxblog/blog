@@ -2,7 +2,7 @@ import request from '../request';
 
 export function getArticleMenu(params = {}) {
   return request({
-    url: "/web/article-menu",
+    url: "/api/articles/menu",
     method: 'get',
     params
   });
@@ -10,14 +10,14 @@ export function getArticleMenu(params = {}) {
 
 export function getArticle(id) {
   return request({
-    url: `/web/article/${id}`,
+    url: `/api/articles/${id}`,
     method: 'get'
   });
 }
 
-export function getArticleType(params = {}) {
+export function getArticleTags(params = {}) {
   return request({
-    url: "/web/article-type",
+    url: "/api/tags",
     method: 'get',
     params
   });
