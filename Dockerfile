@@ -1,12 +1,15 @@
-FROM node:10.7
+FROM node:10.15.3
 
-ENV APP_ROOT /src
+RUN mkdir -p /usr/src/blog
 
-RUN mkdir ${APP_ROOT}
-WORKDIR ${APP_ROOT}
-ADD . ${APP_ROOT}
+WORKDIR /usr/src/blog
+
+ADD package.json /usr/src/blog
 
 RUN npm install
+
 RUN npm run build
 
-ENV HOST 0.0.0.0
+RUN npm run start
+
+ADD . /usr/src/blog
