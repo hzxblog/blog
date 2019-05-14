@@ -2,17 +2,17 @@ version: "3"
 
 services:
   nuxt:
-    build: ./
-    container_name: blog-website
+    build: ./app/
+    container_name: vuevixens-website
     restart: always
     ports:
-      - "3000:3000"
+      - "3333:3333"
     command:
-      "npm run pm2"
+      "npm run start"
 
   nginx:
     image: nginx:1.13
-    container_name: blog-website-nginx
+    container_name: vuevixens-nginx
     ports:
       - "80:80"
     volumes:
