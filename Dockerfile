@@ -13,3 +13,4 @@ RUN npm run build
 RUN npm run start
 
 ADD . /usr/src/blog
+
