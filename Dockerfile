@@ -1,8 +1,7 @@
 FROM node:10.15.3
-
+COPY ./ /usr/src/blog
 ENV NODE_ENV=production
 ENV HOST 0.0.0.0
-
 
 EXPOSE 3000
 
