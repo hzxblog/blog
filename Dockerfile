@@ -1,16 +1,12 @@
 FROM node:10.15.3
 
-RUN mkdir -p /usr/src/blog
+ENV NODE_ENV=production
+ENV HOST 0.0.0.0
 
-WORKDIR /usr/src/blog
 
-ADD package.json /usr/src/blog
+EXPOSE 3000
 
 RUN npm install
-
 RUN npm run build
 
-RUN npm run start
-
-ADD . /usr/src/blog
-
+CMD ["npm", "start"]
