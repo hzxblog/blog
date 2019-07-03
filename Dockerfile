@@ -1,13 +1,14 @@
 FROM node:10.15.3
-MAINTAINER hanzx
+WORKDIR /app
 
-COPY ./ /usr/src/blog
+COPY . /app
 ENV NODE_ENV=production
 ENV HOST 0.0.0.0
 
-EXPOSE 3000
 
+RUN npm i -g pm2
 RUN npm install
 RUN npm run build
 
-CMD ["npm", "start"]
+EXPOSE 3000
+CMD ["pm2-runtime", "server/index.js"]
