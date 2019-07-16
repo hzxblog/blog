@@ -1,14 +1,7 @@
 FROM node:10.15.3
-WORKDIR /app
+WORKDIR /usr/src/blog
 
-COPY . /app
-ENV NODE_ENV=production
-ENV HOST 0.0.0.0
-
+COPY package.json .
 
 RUN npm i -g pm2
 RUN npm install
-RUN npm run build
-
-EXPOSE 3000
-CMD ["pm2-runtime", "server/index.js"]
