@@ -19,7 +19,7 @@
     "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.15.6",
     "markdown-it": "^8.4.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nuxt": "^2.4.0",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"
